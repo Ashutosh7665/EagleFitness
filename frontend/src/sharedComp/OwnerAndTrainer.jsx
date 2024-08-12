@@ -1,6 +1,7 @@
 import React from 'react';
 import Owner from "../assets/Owner.jpg";
-
+import vikas from "../assets/vikas.jpg";
+import gymer from "../assets/gymer.jpg"
 const OwnerAndTrainer = () => {
     const profiles = [
         {
@@ -12,13 +13,13 @@ const OwnerAndTrainer = () => {
         {
             name: "Vikas Sharma",
             role: "Head Trainer",
-            image: "src/assets/vikas.jpg",
+            image: vikas,
             bio: "Vikas is an expert in strength training and nutrition. His personalized training programs have helped countless members transform their lives."
         },
         {
             name: "Mike Johnson",
             role: "Personal Trainer",
-            image: "src/assets/gymer.jpg",
+            image: gymer,
             bio: "Mike specializes in high-intensity interval training (HIIT) and functional fitness. He is passionate about helping clients push their limits."
         }
     ];

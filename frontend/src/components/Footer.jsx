@@ -33,10 +33,10 @@ const Footer = () => {
                                 <a href='/' className='hover:text-yellow-400'>Home</a>
                             </li>
                             <li>
-                            <a href='/AboutUs' className='hover:text-yellow-400'>About Us</a>
+                            <a href='/aboutus' className='hover:text-yellow-400'>About Us</a>
                             </li>
                             <li>
-                                <a href='/ServicePage' className='hover:text-yellow-400'>Services</a>
+                                <a href='/servicepage' className='hover:text-yellow-400'>Services</a>
                             </li>
                             <li>
                                 <a href='/ContactUs' className='hover:text-yellow-400'>Contact</a>
