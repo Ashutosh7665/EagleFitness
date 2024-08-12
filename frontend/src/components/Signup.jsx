@@ -37,42 +37,42 @@ const Signup = () => {
 
     return (
         <div className='h-screen flex justify-center items-center bg-gradient-to-r from-blue-500 to-purple-500 p-5'>
-            <div className='bg-white w-4/5 flex shadow-2xl rounded-xl'>
-                <div className='w-1/2'>
-                    <img src={Signin} alt="" className='w-full rounded-s-xl' />
+            <div className='bg-white w-full md:w-4/5 flex flex-col md:flex-row shadow-2xl rounded-xl'>
+                <div className='w-full md:w-1/2'>
+                    <img src={Signin} alt="" className='w-full rounded-t-xl md:rounded-s-xl md:rounded-t-none' />
                 </div>
-                <div className='w-1/2 flex justify-center'>
+                <div className='w-full md:w-1/2 flex justify-center p-5'>
                     <div className='w-full items-center flex flex-col justify-center'>
                         {successMessage && (
                             <div className='bg-green-100 text-green-700 border border-green-400 p-4 rounded mb-4 w-full text-center'>
                                 {successMessage}
                             </div>
                         )}
-                        <h1 className='text-center text-2xl font-semibold'>Welcome!, Signup</h1>
+                        <h1 className='text-center text-2xl font-semibold mb-4'>Welcome! Signup</h1>
                         <form onSubmit={handleSubmit} className='w-full'>
-                            <div className='my-5 w-full grid grid-cols-2 gap-3'>
+                            <div className='my-5 w-full grid grid-cols-1 md:grid-cols-2 gap-3'>
                                 <div>
-                                    <label htmlFor="">First name</label>
-                                    <input type="text" name='firstName'required placeholder='First Name' className='block p-2 my-2 outline-none border rounded w-full' onChange={handleChange} />
+                                    <label htmlFor="firstName">First name</label>
+                                    <input type="text" name='firstName' required placeholder='First Name' className='block p-2 my-2 outline-none border rounded w-full' onChange={handleChange} />
                                 </div>
                                 <div>
-                                    <label htmlFor="">Last name</label>
+                                    <label htmlFor="lastName">Last name</label>
                                     <input type="text" name='lastName' required placeholder='Last Name' className='block p-2 my-2 outline-none border rounded w-full' onChange={handleChange} />
                                 </div>
                                 <div>
-                                    <label htmlFor="">Email</label>
+                                    <label htmlFor="email">Email</label>
                                     <input type="email" name='email' required placeholder='Email' className='block p-2 my-2 outline-none border rounded w-full' onChange={handleChange} />
                                 </div>
                                 <div>
-                                    <label htmlFor="">Password</label>
+                                    <label htmlFor="password">Password</label>
                                     <input type="password" name='password' required placeholder='Password' className='block p-2 outline-none border rounded my-2 w-full' onChange={handleChange} />
                                 </div>
                                 <div>
-                                    <label htmlFor="">Contact No.</label>
+                                    <label htmlFor="contactNumber">Contact No.</label>
                                     <input type="number" name='contactNumber' required placeholder='Contact No.' className='block p-2 outline-none border rounded my-2 w-full' onChange={handleChange} />
                                 </div>
                                 <div>
-                                    <label htmlFor="">Profile Pic</label>
+                                    <label htmlFor="userImage">Profile Pic</label>
                                     <input type="file" name='userImage' className='block p-2 text-xs outline-none border rounded my-2 w-full' onChange={handleChange} />
                                 </div>
                             </div>

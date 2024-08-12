@@ -33,15 +33,15 @@ const Login = () => {
     }, [auth, error, navigate]);
 
     return (
-        <div className='h-screen flex justify-center items-center'>
-            <div className='bg-white w-4/5 flex shadow-2xl rounded-xl'>
-                <div className='w-1/2'>
-                    <img src={Login1} alt="Login Vector" className='w-full rounded-s-xl' />
+        <div className='h-screen flex justify-center items-center p-5'>
+            <div className='bg-white w-full md:w-4/5 flex flex-col md:flex-row shadow-2xl rounded-xl'>
+                <div className='w-full md:w-1/2'>
+                    <img src={Login1} alt="Login Vector" className='w-full rounded-t-xl md:rounded-s-xl md:rounded-t-none' />
                 </div>
-                <div className='w-1/2 flex justify-center'>
+                <div className='w-full md:w-1/2 flex justify-center p-5'>
                     <div className='w-full items-center flex flex-col justify-center'>
-                        <h1 className='text-center text-2xl font-semibold'>Welcome Back! Login</h1>
-                        <form onSubmit={handleSubmit}>
+                        <h1 className='text-center text-2xl font-semibold mb-4'>Welcome Back! Login</h1>
+                        <form onSubmit={handleSubmit} className='w-full'>
                             <div className='my-4 w-full'>
                                 <div>
                                     <label htmlFor="email">Email</label>
@@ -50,7 +50,7 @@ const Login = () => {
                                         name='email'
                                         placeholder='Email'
                                         required
-                                        className='block p-2 my-2 outline-none border rounded'
+                                        className='block p-2 my-2 outline-none border rounded w-full'
                                         onChange={handleChange}
                                     />
                                 </div>
@@ -61,7 +61,7 @@ const Login = () => {
                                         name='password'
                                         placeholder='Password'
                                         required
-                                        className='block p-2 outline-none border rounded'
+                                        className='block p-2 outline-none border rounded w-full'
                                         onChange={handleChange}
                                     />
                                 </div>
@@ -85,7 +85,7 @@ const Login = () => {
                         </div>
                         {popupMessage && (
                             <div className='fixed top-0 left-0 right-0 flex justify-center mt-4'>
-                                <div className='bg-white p-4 rounded shadow-lg text-center w-1/3'>
+                                <div className='bg-white p-4 rounded shadow-lg text-center w-11/12 md:w-1/3'>
                                     <p className='text-lg font-semibold'>{popupMessage}</p>
                                     <button onClick={() => setPopupMessage('')} className='mt-4 p-2 bg-blue-600 text-white rounded'>
                                         Close

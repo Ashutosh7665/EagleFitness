@@ -5,7 +5,14 @@ import Cart from './Cart';
 
 export default function DrawerComponent({ open, toggleDrawer }) {
   const DrawerList = (
-    <Box sx={{ width: 690 }} role="presentation" onClick={toggleDrawer(true)}>
+    <Box 
+      sx={{ 
+        width: { xs: 320, sm: 400, md: 600, lg: 690 }, // Adjust width based on screen size
+        p: 2 // Add padding for better spacing on small screens
+      }} 
+      role="presentation" 
+      onClick={toggleDrawer(true)}
+    >
       <Cart/>
     </Box>
   );
